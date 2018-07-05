@@ -6,7 +6,11 @@ sap.ui.define([
         "use strict";
         return Controller.extend("sap.ui.demo.walkthrough.controller.App", {
             onShowHello : function(){
-                MessageToast.show("Hello World");
+                var oBundle = this.getView().getModel("i18n").getResourceBundle();
+                var sRecipient = this.getView().getModel().getProperty("/recipient/name");
+                var sMsg = oBundle.getText("helloMsg", [sRecipient]);
+                
+                MessageToast.show(sMsg);
             }
         });
     });
