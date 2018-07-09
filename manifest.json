@@ -6,13 +6,17 @@
 		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
-		"applicationVersion": {"version": "1.0.0"},
-		"dataSources":{
-		    "invoiceRemote":{
-		        "uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
-		        "type": "OData",
-		        "settings":{"odataVersion": "2.0"}
-		    }
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"dataSources": {
+			"invoiceRemote": {
+				"uri": "/destinations/northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -22,7 +26,9 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": ["sap_belize"],
+		"supportedThemes": [
+			"sap_belize"
+		],
 		"icons": {
 			"icon": "sap-icon://activate"
 		}
@@ -47,16 +53,24 @@
 					"bundleName": "sap.ui.demo.walkthrough.i18n.i18n"
 				}
 			},
-	  "invoice": {
-	      "dataSource": "invoiceRemote"
-	  }
+			"invoice": {
+				"dataSource": "invoiceRemote"
+			}
 		},
 		"resources": {
-		    "css":[{"uri": "css/style.css"}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"contentDensities": {
 			"compact": false,
 			"cozy": false
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "",
+		"_version": "1.1.0"
 	}
 }
